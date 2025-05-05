@@ -267,10 +267,14 @@
             </span><br>
             
             <!-- Bouton "En savoir plus" -->
-            <button class="mt-4 text-blue-500 hover:text-blue-700" onclick="toggleModal()">En savoir plus</button>
+            <!--<button class="mt-4 text-blue-500 hover:text-blue-700" onclick="toggleModal()">En savoir plus</button>-->
+            <button data-modal="modalExail" class="text-blue-500 hover:text-blue-700 font-medium open-modal">
+                En savoir plus
+            </button>
 
             <!-- Fenêtre Modale (Masquée par défaut) -->
-            <div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
+            <!--<div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">-->
+            <div id="modalExail" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">    
                 <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-3xl relative max-h-[80vh] overflow-y-auto">
                     <button class="text-red-500 hover:text-red-700 float-right" onclick="toggleModal()">Fermer</button>
                     <h3 class="text-xl font-semibold mb-4">Détails de l'expérience chez Exail</h3>
@@ -341,10 +345,14 @@
             </span><br>
             
             <!-- Bouton "En savoir plus" -->
-            <button class="mt-4 text-blue-500 hover:text-blue-700" onclick="toggleModal()">En savoir plus</button>
+            <!--<button class="mt-4 text-blue-500 hover:text-blue-700" onclick="toggleModal()">En savoir plus</button>-->
+            <button data-modal="modalNaval" class="text-blue-500 hover:text-blue-700 font-medium open-modal">
+                En savoir plus
+            </button>
 
             <!-- Fenêtre Modale (Masquée par défaut) -->
-            <div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
+            <!--<div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">-->
+            <div id="modalNaval" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">    
                 <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-3xl relative max-h-[80vh] overflow-y-auto">
                     <button class="text-red-500 hover:text-red-700 float-right" onclick="toggleModal()">Fermer</button>
                     <h3 class="text-xl font-semibold mb-4">Détails de l'expérience chez Exail</h3>
