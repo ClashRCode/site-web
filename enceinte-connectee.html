@@ -20,13 +20,20 @@
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
-    <h2 class="text-3xl font-bold text-indigo-700">Enceinte connectée</h2>
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-4">
+    <!--<h2 class="text-3xl font-bold text-indigo-700">Enceinte connectée</h2>-->
+    <!-- Titre + bouton retour alignés -->
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-3xl font-bold text-indigo-700">Enceinte connectée</h2>
+        <a href="mes-projets.html" class="px-4 py-2 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition">
+        ← Retour
+        </a>
+    </div>
 
     <!-- Description  -->
     <p class="text-lg font-bold">Description : </p>
     <p class="text-lg font-normal"> 
-        Réalisation d'une enceinte connectée en utilisant un ESP32 pour réaliser la connexion bluetooth, un DAC externe connecté en I2C et d’un écran tactile pour le contrôle. <br>
+        Réalisation d'une enceinte connectée en utilisant un ESP32 pour la connexion bluetooth A2DP, un DAC externe connecté en I2C et d’un écran tactile pour le contrôle. <br>
         Le préamplificateur avec le contrôle de tonalité, l’amplificateur de puissance et les haut-parleurs (HP) sont achetés dans le commerce. <br>
         L’entrée peut être bluetooth ou filaire, le choix se fait en utilisant un switch (avec des leds pour indiquer le choix).
     </p><br>
@@ -46,7 +53,7 @@
     <p class="text-lg font-bold">Environnement technique : </p>
     <p class="text-lg font-normal"> 
         ArduinoIDE, ESP32, Bluetooth, I2C, DAC, C++, EasyEDA
-    </p>
+    </p><br>
 
     <!-- Images -->
     <div class="mt-8 space-y-6">
@@ -54,7 +61,6 @@
         <img src="img/enceinte2.png" alt="Enceinte connectée 2" class="mx-auto rounded-lg shadow-md max-w-full">
         <img src="img/enceinte3.png" alt="Enceinte connectée 3" class="mx-auto rounded-lg shadow-md max-w-full">
     </div>
-
   </main>
 
 </body>
