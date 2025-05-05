@@ -6,7 +6,6 @@
   <title>CV - John Doe</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Fonction d'ouverture de modale
     function openModal(id) {
       document.getElementById(id).classList.remove('hidden');
     }
@@ -29,7 +28,7 @@
 
   <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
-    <!-- 🛠 Compétences -->
+    <!-- Compétences -->
     <section>
       <div class="flex items-center mb-4">
         <svg class="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -43,7 +42,7 @@
       </ul>
     </section>
 
-    <!-- 🎓 Formations -->
+    <!-- Formations -->
     <section>
       <div class="flex items-center mb-4">
         <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -56,7 +55,7 @@
       </ul>
     </section>
 
-    <!-- 💼 Expériences -->
+    <!-- Expériences -->
     <section>
       <div class="flex items-center mb-4">
         <svg class="w-6 h-6 text-purple-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
@@ -66,35 +65,57 @@
       <ul class="space-y-3 text-gray-700">
         <li>
           <button onclick="openModal('exp1')" class="text-left hover:text-purple-600 underline">
-            Développeur IoT – TechSolutions (2023)
+            Développeur IoT – TechSolutions (Avril - Juin 2023)
           </button>
         </li>
         <li>
           <button onclick="openModal('exp2')" class="text-left hover:text-purple-600 underline">
-            Technicien FabLab – FabLab Z (2022)
+            Technicien FabLab – FabLab Z (Juillet - Décembre 2022)
           </button>
         </li>
       </ul>
     </section>
-
   </main>
 
-  <!-- 💬 Modales -->
+  <!-- Modale Expérience 1 -->
   <div id="exp1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative">
-      <button onclick="closeModal('exp1')" class="absolute top-2 right-3 text-gray-500 hover:text-black">&times;</button>
-      <h3 class="text-xl font-semibold text-purple-700 mb-2">Développeur IoT – TechSolutions</h3>
-      <p class="text-gray-700 text-sm">Stage de 3 mois : création d’une plateforme de surveillance d’équipements via ESP32, LoRa, et dashboard web.  
-      Implémentation des WebSockets, intégration de capteurs multi-paramètres.</p>
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl w-full relative">
+      <button onclick="closeModal('exp1')" class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
+      <div class="flex items-center mb-4">
+        <img src="https://via.placeholder.com/40x40" alt="Logo TechSolutions" class="w-10 h-10 mr-3" />
+        <div>
+          <h3 class="text-xl font-semibold text-purple-700">Développeur IoT – TechSolutions</h3>
+          <p class="text-sm text-gray-600">Avril – Juin 2023</p>
+        </div>
+      </div>
+      <div class="text-gray-700 text-sm space-y-3">
+        <p><strong>Contexte :</strong> Développement d'une solution de monitoring pour des équipements industriels distants.</p>
+        <p><strong>Rôle :</strong> Concepteur/développeur embarqué et intégrateur WebSocket temps réel.</p>
+        <p><strong>Réalisations :</strong> Mise en place d’un réseau LoRa, développement sur ESP32, création d’un dashboard dynamique avec Chart.js.</p>
+        <p><strong>Environnement technique :</strong> ESP32, C++, WebSocket, HTML/CSS, Chart.js, Tailwind CSS, GitHub.</p>
+      </div>
     </div>
   </div>
 
+  <!-- Modale Expérience 2 -->
   <div id="exp2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative">
-      <button onclick="closeModal('exp2')" class="absolute top-2 right-3 text-gray-500 hover:text-black">&times;</button>
-      <h3 class="text-xl font-semibold text-purple-700 mb-2">Technicien FabLab – FabLab Z</h3>
-      <p class="text-gray-700 text-sm">Prototypage de systèmes électroniques. Accompagnement des porteurs de projets dans la fabrication d’objets connectés (3D, Arduino, ESP).</p>
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-xl w-full relative">
+      <button onclick="closeModal('exp2')" class="absolute top-2 right-3 text-gray-500 hover:text-black text-2xl">&times;</button>
+      <div class="flex items-center mb-4">
+        <img src="https://via.placeholder.com/40x40" alt="Logo FabLab Z" class="w-10 h-10 mr-3" />
+        <div>
+          <h3 class="text-xl font-semibold text-purple-700">Technicien FabLab – FabLab Z</h3>
+          <p class="text-sm text-gray-600">Juillet – Décembre 2022</p>
+        </div>
+      </div>
+      <div class="text-gray-700 text-sm space-y-3">
+        <p><strong>Contexte :</strong> Assistance aux usagers dans la conception et prototypage d’objets électroniques.</p>
+        <p><strong>Rôle :</strong> Support technique, maintenance, conseil et prototypage de projets clients.</p>
+        <p><strong>Réalisations :</strong> Conception de maquettes interactives, montage Arduino, impression 3D, formation de publics débutants.</p>
+        <p><strong>Environnement technique :</strong> Arduino, ESP8266, Tinkercad, Fusion360, Python, impression 3D.</p>
+      </div>
     </div>
   </div>
+
 </body>
 </html>
