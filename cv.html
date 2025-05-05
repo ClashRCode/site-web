@@ -271,7 +271,7 @@
 
             <!-- Fenêtre Modale (Masquée par défaut) -->
             <div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
-                <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-3xl relative max-h-screen overflow-y-auto">
+                <div class="bg-white p-6 rounded-lg shadow-xl w-full max-w-3xl relative max-h-[80vh] overflow-y-auto">
                     <button class="text-red-500 hover:text-red-700 float-right" onclick="toggleModal()">Fermer</button>
                     <h3 class="text-xl font-semibold mb-4">Détails de l'expérience chez Exail</h3>
             <!--
@@ -352,14 +352,14 @@
 
     </section>
   </main>
-
+  <!--
   <script>
     function toggleModal() {
       const modal = document.getElementById('experienceModal');
       modal.classList.toggle('hidden');
     }
   </script>
-
+    -->
   <script>
     const modal = document.getElementById("experienceModal");
     const body = document.body;
