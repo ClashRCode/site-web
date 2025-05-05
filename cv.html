@@ -254,62 +254,82 @@
         <!-- -----------------------  -->
         <!-- Exail -->
         <div class="bg-white rounded-xl shadow p-4 flex flex-col items-start w-full space-x-4 space-y-4">
+            <!-- Entreprise  -->
             <img src="img/exail.png" alt="Exail" class="h-24" />
             <span class="text-2xl font-bold">
                 Exail         10/2022 - 03/2023
             </span><br>
+
+            <!-- Rôle  -->
+            <span class="text-lg font-bold">Rôle : </span>
+            <span class="text-lg font-normal"> 
+                Ingénieur système embarqué – électrotechnique – essais
+            </span><br>
+            
+            <!-- Bouton "En savoir plus" -->
+            <button class="mt-4 text-blue-500 hover:text-blue-700" onclick="toggleModal()">En savoir plus</button>
+
+            <!-- Fenêtre Modale (Masquée par défaut) -->
+            <div id="experienceModal" class="hidden fixed inset-0 bg-gray-500 bg-opacity-50 flex justify-center items-center z-50">
+                <div class="text-lg font-normal>
+                    <button class="text-red-500 hover:text-red-700 float-right" onclick="toggleModal()">Fermer</button>
+                    <h3 class="text-xl font-semibold mb-4">Détails de l'expérience chez Exail</h3>
+            <!--
             <div class="text-lg font-normal">
-                <!-- Rôle  -->
+            -->
+                <!-- Rôle  
                 <p class="text-lg font-bold">Rôle : </p>
                 <p class="text-lg font-normal"> 
                     Ingénieur système embarqué – électrotechnique – essais
                 </p><br>
+                -->
 
-                <!-- Contexte -->
-                <p class="text-lg font-bold">Contexte : </p>
-                <p class="text-lg font-normal">
-                    Ingénieur au sein d’un BE électricité/électronique de 7 personnes, dans une entreprise réalisant des drones marins téléopérés/autonomes de 7m à 16m.
-                </p><br>
+                    <!-- Contexte -->
+                    <p class="text-lg font-bold">Contexte : </p>
+                    <p class="text-lg font-normal">
+                        Ingénieur au sein d’un BE électricité/électronique de 7 personnes, dans une entreprise réalisant des drones marins téléopérés/autonomes de 7m à 16m.
+                    </p><br>
 
-                <!-- Réalisations  -->
-                <p class="text-lg font-bold"> Réalisations :</p>
-                <ul class="list-disc pl-5 font-normal space-y-1">
-                    <li>Configurations et essais des équipements internes : systeme de telecom, systeme anti incendie, calculateur moteur, variateur de moteur, controleur de verin, plc, camera, radar, lidar, etc. Tous les équipements électriques et électroniques du drone</li>
-                    <li>Mise en service et essai (en atelier, à quai et en mer) des drones</li>
-                    <li>Réalisation de FAT/SAT avec les clients, ainsi que de démonstrations clients</li>
-                    <li>Support technique (en atelier ou à l’étranger)</li>
-                    <li>Recherche et résolution de panne : à la fois ingénieur et technicien <br>
-                        Exemple de résolution des disfonctionnements du drone en temps réel : 
-                        <ul class="list-square pl-5 text-base font-normal space-y-1">
-                            <li>Câblage électrique</li>
-                            <li>Motorisation (exemples: changement de bougies, d'alternateur, de la solenoide d'injection)</li>
-                            <li>Fabrication de piece composite</li>
-                            <li>Mécanique (exemple : changer des verins de barres, des treuils, du moteur du système de levage de quille)</li>
-                            <li>Fabrication de piece composite</li>
-                            <li>Réseau informatique </li>
-                            <li>Codage PLC</li>
-                        </ul>
-                    </li>
-                    <li>R&D : recherche de nouvelles solutions, du matériel nécessaire, distribution de l’énergie électrique, réalisation des plans de câblages, configuration des équipements, test et intégration dans le drone. <br>
-                        Exemple : fabrication d’un banc d’essai de treuil : 
-                        <ul class="list-square pl-5 text-base font-normal space-y-1">
-                            <li>Recherche des composants (variateur moteur, disjoncteur, PLC, relais, IHM, …)</li>
-                            <li>Réalisation des plans de câblage et câblage</li>
-                            <li>Codage du PLC et des IHM</li>
-                            <li>Configuration des équipements</li>
-                            <li>Test et validation du banc d’essai</li>
-                        </ul>
-                    </li>
-                    <li>Interaction avec les fournisseurs pour faire de l’amélioration continue</li>
-                    <li>Rédaction documentaire : fiche de suivi d’essai, procédure de configuration, synoptique fonctionnel du drone</li>
-                    <li>Mise en place d’une VM windows pour simplifier la mise en service/essais et le support technique</li>
-                </ul><br>
+                    <!-- Réalisations  -->
+                    <p class="text-lg font-bold"> Réalisations :</p>
+                    <ul class="list-disc pl-5 font-normal space-y-1">
+                        <li>Configurations et essais des équipements internes : systeme de telecom, systeme anti incendie, calculateur moteur, variateur de moteur, controleur de verin, plc, camera, radar, lidar, etc. Tous les équipements électriques et électroniques du drone</li>
+                        <li>Mise en service et essai (en atelier, à quai et en mer) des drones</li>
+                        <li>Réalisation de FAT/SAT avec les clients, ainsi que de démonstrations clients</li>
+                        <li>Support technique (en atelier ou à l’étranger)</li>
+                        <li>Recherche et résolution de panne : à la fois ingénieur et technicien <br>
+                            Exemple de résolution des disfonctionnements du drone en temps réel : 
+                            <ul class="list-square pl-5 text-base font-normal space-y-1">
+                                <li>Câblage électrique</li>
+                                <li>Motorisation (exemples: changement de bougies, d'alternateur, de la solenoide d'injection)</li>
+                                <li>Fabrication de piece composite</li>
+                                <li>Mécanique (exemple : changer des verins de barres, des treuils, du moteur du système de levage de quille)</li>
+                                <li>Fabrication de piece composite</li>
+                                <li>Réseau informatique </li>
+                                <li>Codage PLC</li>
+                            </ul>
+                        </li>
+                        <li>R&D : recherche de nouvelles solutions, du matériel nécessaire, distribution de l’énergie électrique, réalisation des plans de câblages, configuration des équipements, test et intégration dans le drone. <br>
+                            Exemple : fabrication d’un banc d’essai de treuil : 
+                            <ul class="list-square pl-5 text-base font-normal space-y-1">
+                                <li>Recherche des composants (variateur moteur, disjoncteur, PLC, relais, IHM, …)</li>
+                                <li>Réalisation des plans de câblage et câblage</li>
+                                <li>Codage du PLC et des IHM</li>
+                                <li>Configuration des équipements</li>
+                                <li>Test et validation du banc d’essai</li>
+                            </ul>
+                        </li>
+                        <li>Interaction avec les fournisseurs pour faire de l’amélioration continue</li>
+                        <li>Rédaction documentaire : fiche de suivi d’essai, procédure de configuration, synoptique fonctionnel du drone</li>
+                        <li>Mise en place d’une VM windows pour simplifier la mise en service/essais et le support technique</li>
+                    </ul><br>
 
-                <!-- Environnement technique  -->
-                <p class="text-lg font-bold">Environnement technique : </p>
-                <p class="text-lg font-normal"> 
-                    Schneider Ecostruxure control expert, Schneider terminal operator, Wireshark, Microsoft office (dont visio), outils de mesure (oscilloscope et multimètre)
-                </p>
+                    <!-- Environnement technique  -->
+                    <p class="text-lg font-bold">Environnement technique : </p>
+                    <p class="text-lg font-normal"> 
+                        Schneider Ecostruxure control expert, Schneider terminal operator, Wireshark, Microsoft office (dont visio), outils de mesure (oscilloscope et multimètre)
+                    </p>
+                </div>
             </div>
         </div>
 
