@@ -359,6 +359,28 @@
       modal.classList.toggle('hidden');
     }
   </script>
+
+  <script>
+    const modal = document.getElementById("experienceModal");
+    const body = document.body;
+
+    document.getElementById("openModal").addEventListener("click", () => {
+      modal.classList.remove("hidden");
+      body.classList.add("overflow-hidden");
+    });
+
+    document.getElementById("closeModal").addEventListener("click", () => {
+      modal.classList.add("hidden");
+      body.classList.remove("overflow-hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+        body.classList.remove("overflow-hidden");
+      }
+    });
+  </script>
   
 </body>
 </html>
