@@ -536,11 +536,35 @@
     </section>
   </main>
   
+  <!-- Bouton Retour en haut -->
+  <button 
+    id="backToTopBtn" 
+    onclick="scrollToTop()" 
+    class="fixed bottom-6 right-6 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-opacity opacity-0 invisible z-50">
+    ↑ Top
+  </button>
+
   <!-- Script -->
   <script>
+    // bouton Retour
     function toggleModal(id) {
         const modal = document.getElementById(id);
         modal.classList.toggle('hidden');
+    }
+    
+    // bouton Top
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.remove("opacity-0", "invisible");
+        backToTopBtn.classList.add("opacity-100", "visible");
+      } else {
+        backToTopBtn.classList.add("opacity-0", "invisible");
+        backToTopBtn.classList.remove("opacity-100", "visible");
+      }
+    });
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   </script>
   
