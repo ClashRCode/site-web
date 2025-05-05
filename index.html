@@ -6,21 +6,42 @@
   <title>Accueil - John Doe</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-slate-100 text-gray-800 font-sans">
+
+  <!-- Navigation -->
   <header class="bg-white shadow">
     <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">John Doe</h1>
+      <h1 class="text-2xl font-bold text-indigo-600">John Doe</h1>
       <nav class="space-x-4">
-        <a href="index.html" class="text-blue-600 font-medium">Accueil</a>
+        <a href="index.html" class="text-indigo-600 font-medium">Accueil</a>
         <a href="cv.html" class="hover:underline">CV</a>
         <a href="projets.html" class="hover:underline">Projets</a>
       </nav>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-12 text-center">
-    <h2 class="text-4xl font-bold mb-4">Bienvenue</h2>
-    <p class="text-lg text-gray-700">Je suis un passionné de technologie, d'électronique embarquée et de développement web.  
-    Découvrez mon CV et mes projets personnels ci-dessous.</p>
+
+  <!-- Présentation -->
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <div class="flex flex-col items-center text-center">
+      <img src="img/photo.jpg" alt="Photo de John Doe" class="w-40 h-40 rounded-full shadow mb-6 object-cover" />
+      <h2 class="text-4xl font-bold mb-4">Bienvenue !</h2>
+      <p class="text-lg text-gray-700 max-w-xl mb-8">
+        Je suis développeur passionné par l'électronique embarquée, les objets connectés et les interfaces web.  
+        J'aime concevoir des systèmes intelligents, du capteur à l'affichage graphique en temps réel.
+      </p>
+    </div>
+
+    <!-- Coordonnées -->
+    <section class="bg-white rounded-xl shadow p-6 mt-6 text-center">
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Contact</h3>
+      <div class="space-y-2 text-gray-700">
+        <p>📧 <a href="mailto:john.doe@email.com" class="text-blue-600 hover:underline">john.doe@email.com</a></p>
+        <p>📞 06 12 34 56 78</p>
+        <p>💼 <a href="https://www.linkedin.com/in/johndoe" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a></p>
+        <p>🐙 <a href="https://github.com/johndoe" target="_blank" class="text-blue-600 hover:underline">GitHub</a></p>
+      </div>
+    </section>
   </main>
+
 </body>
 </html>
