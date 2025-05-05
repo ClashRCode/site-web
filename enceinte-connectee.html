@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Système de surveillance pour pompiers</title>
+  <title>Enceinte connectée</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-gray-800 font-sans">
@@ -11,7 +11,7 @@
   <!-- Navigation -->
   <header class="bg-white shadow">
     <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-indigo-600">John Doe</h1>
+      <h1 class="text-2xl font-bold text-indigo-600">Jules DUCASSE--FERNANDEZ</h1>
       <nav class="space-x-4">
         <a href="index.html" class="hover:underline">Accueil</a>
         <a href="cv.html" class="hover:underline">CV</a>
@@ -21,22 +21,41 @@
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-10 space-y-8">
-    <h2 class="text-3xl font-bold text-indigo-700">Système de surveillance pour pompiers</h2>
-
+    <h2 class="text-3xl font-bold text-indigo-700">Enceinte connectée</h2>
     <img src="img/projet1.jpg" alt="Illustration projet" class="w-full rounded-xl shadow" />
 
-    <p class="text-lg">
-      Ce projet consiste à développer une solution embarquée pour surveiller en temps réel les signes vitaux des pompiers en intervention : température corporelle, rythme cardiaque, niveau d’oxygène, stress, détection de gaz dangereux, etc.
+    <!-- Description  -->
+    <p class="text-lg font-bold">Description : </p>
+    <p class="text-lg font-normal"> 
+        Réalisation d'une enceinte connectée en utilisant un ESP32 pour réaliser la connexion bluetooth, un DAC externe connecté en I2C et d’un écran tactile pour le contrôle. <br>
+        Le préamplificateur avec le contrôle de tonalité, l’amplificateur de puissance et les haut-parleurs (HP) sont achetés dans le commerce. <br>
+        L’entrée peut être bluetooth ou filaire, le choix se fait en utilisant un switch (avec des leds pour indiquer le choix).
+    </p><br>
+
+    <!-- Etapes  -->
+    <p class="text-lg font-bold"> Etapes :</p>
+    <ul class="list-disc pl-5 font-normal space-y-1">
+        <li>Codage en C++ du transfert du flux audio en Bluetooth A2DP. Comme tous mes projets j’utilise un GitHub personnel</li>
+        <li>Codage de la redirection du flux en I2C sur le DAC externe (ayant un taux d’échantillonnage fréquence et bits supérieur à l’ESP32)</li>
+        <li>Codage de l’écran tactile (affichage des métadonnées et création des boutons)</li>
+        <li>Recherche des composants nécessaires (préamplificateur avec contrôle de tonalité, amplificateur, transformateur d’alimentation 230VAC-24VAC, haut-parleur, etc)</li>
+        <li>Réalisation du schéma électronique </li>
+        <li>Ajout de ponts diviseur de tension pour l’alimentation AC 12V et 5V ; ajout d’un pont de diode pour redresser le 5V destiné aux leds et l’ESP32)</li>
+    </ul><br>
+
+    <!-- Environnement technique  -->
+    <p class="text-lg font-bold">Environnement technique : </p>
+    <p class="text-lg font-normal"> 
+        ArduinoIDE, ESP32, Bluetooth, I2C, DAC, C++, EasyEDA
     </p>
 
-    <ul class="list-disc pl-6 text-gray-700">
-      <li>ESP32 avec réseau LoRa Mesh</li>
-      <li>Affichage des données en temps réel via WebSocket</li>
-      <li>Utilisation de Chart.js pour les graphiques dynamiques</li>
-      <li>Stockage SPIFFS pour logs et page web</li>
-    </ul>
+    <!-- Images -->
+    <div class="mt-8 space-y-6">
+        <img src="img/enceinte1.jpg" alt="Enceinte connectée 1" class="mx-auto rounded-lg shadow-md max-w-full">
+        <img src="img/enceinte2.jpg" alt="Enceinte connectée 2" class="mx-auto rounded-lg shadow-md max-w-full">
+        <img src="img/enceinte3.jpg" alt="Enceinte connectée 3" class="mx-auto rounded-lg shadow-md max-w-full">
+    </div>
 
-    <p class="text-gray-600 text-sm">Dernière mise à jour : mai 2025</p>
   </main>
 
 </body>
