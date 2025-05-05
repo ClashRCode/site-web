@@ -5,46 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV - John Doe</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Fonction d'ouverture de modale
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
   <header class="bg-white shadow">
-    <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">John Doe</h1>
+    <div class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-700">John Doe</h1>
       <nav class="space-x-4">
         <a href="index.html" class="hover:underline">Accueil</a>
-        <a href="cv.html" class="text-blue-600 font-medium">CV</a>
+        <a href="cv.html" class="text-indigo-600 font-medium">CV</a>
         <a href="projets.html" class="hover:underline">Projets</a>
       </nav>
     </div>
   </header>
-  <main class="max-w-3xl mx-auto px-4 py-12">
-    <h2 class="text-3xl font-bold mb-6">Curriculum Vitae</h2>
 
-    <section class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">🎓 Formation</h3>
-      <ul class="list-disc ml-6 text-gray-700">
-        <li>Bachelor Informatique - Université X (2020-2023)</li>
-        <li>BTS Électronique embarquée - Lycée Y (2018-2020)</li>
-      </ul>
-    </section>
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
 
-    <section class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">💼 Expériences</h3>
-      <ul class="list-disc ml-6 text-gray-700">
-        <li>Stage développeur IoT chez TechSolutions (2023)</li>
-        <li>Technicien prototypage chez FabLab Z (2022)</li>
-      </ul>
-    </section>
-
-    <section class="mb-8">
-      <h3 class="text-xl font-semibold mb-2">🛠 Compétences</h3>
-      <p class="text-gray-700">ESP32, Arduino, Python, C/C++, HTML/CSS/JS, WebSocket, Tailwind CSS, Git/GitHub</p>
-    </section>
-
+    <!-- 🛠 Compétences -->
     <section>
-      <h3 class="text-xl font-semibold mb-2">🗣 Langues</h3>
-      <p class="text-gray-700">Français (natif), Anglais (professionnel)</p>
+      <div class="flex items-center mb-4">
+        <svg class="w-6 h-6 text-green-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24"><path d="M9.75 3v1.5H3v3h6.75V9H3v3h6.75v1.5H3v3h6.75V21h3V3h-3Z"/></svg>
+        <h2 class="text-2xl font-bold text-green-700">Compétences</h2>
+      </div>
+      <ul class="list-disc ml-6 text-gray-700">
+        <li>ESP32, Arduino, LoRa, C/C++, Python</li>
+        <li>Web : HTML, CSS, JavaScript, WebSocket</li>
+        <li>Visualisation : Chart.js, Tailwind CSS, GitHub</li>
+      </ul>
     </section>
+
+    <!-- 🎓 Formations -->
+    <section>
+      <div class="flex items-center mb-4">
+        <svg class="w-6 h-6 text-blue-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24"><path d="M12 14L2 9l10-5 10 5-10 5v6.5"/></svg>
+        <h2 class="text-2xl font-bold text-blue-700">Formations</h2>
+      </div>
+      <ul class="list-disc ml-6 text-gray-700">
+        <li>Bachelor Informatique – Université X (2020-2023)</li>
+        <li>BTS Systèmes embarqués – Lycée Y (2018-2020)</li>
+      </ul>
+    </section>
+
+    <!-- 💼 Expériences -->
+    <section>
+      <div class="flex items-center mb-4">
+        <svg class="w-6 h-6 text-purple-600 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24"><path d="M9 2h6a2 2 0 012 2v2h3a1 1 0 011 1v2H3V7a1 1 0 011-1h3V4a2 2 0 012-2z"/><path d="M3 10h18v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10z"/></svg>
+        <h2 class="text-2xl font-bold text-purple-700">Expériences</h2>
+      </div>
+      <ul class="space-y-3 text-gray-700">
+        <li>
+          <button onclick="openModal('exp1')" class="text-left hover:text-purple-600 underline">
+            Développeur IoT – TechSolutions (2023)
+          </button>
+        </li>
+        <li>
+          <button onclick="openModal('exp2')" class="text-left hover:text-purple-600 underline">
+            Technicien FabLab – FabLab Z (2022)
+          </button>
+        </li>
+      </ul>
+    </section>
+
   </main>
+
+  <!-- 💬 Modales -->
+  <div id="exp1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative">
+      <button onclick="closeModal('exp1')" class="absolute top-2 right-3 text-gray-500 hover:text-black">&times;</button>
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">Développeur IoT – TechSolutions</h3>
+      <p class="text-gray-700 text-sm">Stage de 3 mois : création d’une plateforme de surveillance d’équipements via ESP32, LoRa, et dashboard web.  
+      Implémentation des WebSockets, intégration de capteurs multi-paramètres.</p>
+    </div>
+  </div>
+
+  <div id="exp2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full relative">
+      <button onclick="closeModal('exp2')" class="absolute top-2 right-3 text-gray-500 hover:text-black">&times;</button>
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">Technicien FabLab – FabLab Z</h3>
+      <p class="text-gray-700 text-sm">Prototypage de systèmes électroniques. Accompagnement des porteurs de projets dans la fabrication d’objets connectés (3D, Arduino, ESP).</p>
+    </div>
+  </div>
 </body>
 </html>
