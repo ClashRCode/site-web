@@ -38,17 +38,18 @@
     <!-- Etapes  -->
     <p class="text-lg font-bold"> Etapes :</p>
     <ul class="list-disc pl-5 font-normal space-y-1">
-        <li>Codage en C++ des connexions WIFI de l’ESP32. Il fonctionne en STA (station). Le mode STA permet à l’ESP32 de se connecter à la box WIFI de l’opérateur internet afin de pouvoi accéder à l'IHM à distance.</li>
+        <li>Codage des connexions WIFI de l’ESP32. Il fonctionne en STA (station). Le mode STA permet à l’ESP32 de se connecter à la box WIFI de l’opérateur internet afin de pouvoi accéder à l'IHM à distance.</li>
         <li>Codage du controle du relais par l'ESP32.</li>
-        <li>Possibilité d'ajouter plusieurs plages horaires, des exceptions et des périodes de vacances</li>
-        <li>Codage de l'IHM.</li>
+        <li>Possibilité d'ajouter plusieurs plages horaires, des exceptions et des périodes de vacances.</li>
+        <li>Codage de l'IHM et de l'OTA.</li>
+        <li>Ajout d'un module RTC I2C DS3231 GT584 pour un fonctionnement sans serveur NTP. Le module RTC permet de garder l'heure même lorsque l'ESP32 est éteint.</li>
         <li>Cablage électrique pour intégrer le système sous forme de prises gigognes.</li>
     </ul><br>
 
     <!-- Environnement technique  -->
     <p class="text-lg font-bold">Environnement technique : </p>
     <p class="text-lg font-normal"> 
-        ArduinoIDE, ESP32, WIFI, électricité
+        ArduinoIDE, ESP32, WIFI, électricité, C++ et IHM
     </p><br>
   </main>
 
